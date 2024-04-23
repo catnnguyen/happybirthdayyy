@@ -4,8 +4,8 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'April 24, 2024',
-  name: 'Cat'
+  birthdate: 'April 22, 2024',
+  name: 'ALEX!!!'
 };
 
 function hideEverything() {
@@ -26,6 +26,8 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
+
+// calculate how time until bday
 let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
@@ -48,7 +50,7 @@ x = setInterval(function() {
     hw = w / 2, // half-width
     hh = h / 2,
     opts = {
-      strings: ['HAPPY', 'BIRTHDAY!', config.name],
+      strings: ['HAPPY', 'BIRTHDAYYY', config.name],
       charSize: 30,
       charSpacing: 35,
       lineHeight: 40,
@@ -448,27 +450,40 @@ x = setInterval(function() {
     ctx.font = opts.charSize + 'px Verdana';
   });
 
-  if (distance > 0) {
+  // celebration code
+  if (distance > 0) { // when the countdown is not over
     head.style.display = 'initial';
     count.style.display = 'initial';
-  } else {
-    head.style.display = 'none';
+  } else { // when the countdown is over
+
+    // hide the count down stuff
+    head.style.display = 'none'; 
     count.style.display = 'none';
+    
+    //makes the gift box visible
     giftbox.style.display = 'initial';
-    clearInterval(x);
-    let merrywrap = document.getElementById('merrywrap');
-    let box = merrywrap.getElementsByClassName('giftbox')[0];
+    // stop the counter was initiated with setInterval
+    clearInterval(x); 
+    let merrywrap = document.getElementById('merrywrap'); // gets this from index.html
+    let box = merrywrap.getElementsByClassName('giftbox')[0]; //  first element with the class name "giftbox" that is a descendant of the element with the id "merrywrap".
     let step = 1;
     let stepMinutes = [2000, 2000, 1000, 1000];
 
     function init() {
-      box.addEventListener('click', openBox, false);
-      box.addEventListener('click', showfireworks, false);
+      box.addEventListener('click', openBox, false); // When the box is clicked, it triggers the openBox function.
+      box.addEventListener('click', showfireworks, false); // When the box is clicked, it triggers the showfireworks function.
     }
 
     function stepClass(step) {
       merrywrap.className = 'merrywrap';
       merrywrap.className = 'merrywrap step-' + step;
+    }
+
+    function test() {
+      setTimeout(function() {
+        window.location.href = 'test.html';
+    }, 10000);
+      
     }
 
     function openBox() {
@@ -477,8 +492,14 @@ x = setInterval(function() {
       }
       stepClass(step);
       if (step === 3) {
+        // Create a link element
+        var link = document.createElement('a');
+        // Add event listener to the link
+        link.addEventListener('click',test());
+          
       }
       if (step === 4) {
+
         return;
       }
       setTimeout(openBox, stepMinutes[step - 1]);
