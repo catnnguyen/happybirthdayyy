@@ -479,9 +479,9 @@ x = setInterval(function() {
       merrywrap.className = 'merrywrap step-' + step;
     }
 
-    function pageOne() {
+    function g1() {
       setTimeout(function() {
-        window.location.href = 'pageOne.html';
+        window.location.href = 'g1.html';
     }, 10000);
       
     }
@@ -495,7 +495,7 @@ x = setInterval(function() {
         // Create a link element
         var link = document.createElement('a');
         // Add event listener to the link
-        link.addEventListener('click',pageOne());
+        link.addEventListener('click',g1());
           
       }
       if (step === 4) {
