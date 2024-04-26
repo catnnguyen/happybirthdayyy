@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", function() {
             // Navigate to a different HTML page based on which GIF is clicked
             switch (this.alt) {
                 case "gif1":
-                    window.location.href = "g6b.html";
+                    window.location.href = "g8.html";
                     break;
                 case "gif2":
-                    window.location.href = "g6.html";
+                    window.location.href = "g8.html";
                     break;
                 case "gif3":
-                    window.location.href = "g6b.html";
+                    window.location.href = "g8.html";
                     break;
                 case "gif4":
-                    window.location.href = "g6b.html";
+                    window.location.href = "g8.html";
                     break;
                 default:
                     break;
