@@ -5,11 +5,11 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = ":-)";
+  question.innerHTML = "press continue to see your results :-)";
   yesBtn.style.display = 'none';
   noBtn.style.display = 'none';
   gif.src =
-    "https://media1.giphy.com/media/iCVzZwwE6QNAV2tEE0/giphy.gif";
+    "https://media.giphy.com/media/FUwwSa0xOgirv4xPpp/giphy.gif?cid=ecf05e47bsqd2zq4z7vka1mrd0twbzb9zfu1z8b45qn39bhk&ep=v1_stickers_search&rid=giphy.gif&ct=s";
 
 
   // Create a button element
@@ -38,7 +38,7 @@ yesBtn.addEventListener("click", () => {
   // Prevent the default action (following the link or submitting a form)
   event.preventDefault();
   // Navigate to the specified URL
-  window.location.href = 'g1.html';
+  window.location.href = 'pageOne.html';
 });
 
 // Append the button to the document body or any other parent element
@@ -47,7 +47,7 @@ document.body.appendChild(button);
 // Create a button element
 var button2 = document.createElement('button');
 // Set any attributes or properties for the button, such as text content
-button2.textContent = 'next';
+button2.textContent = 'continue';
 
 button2.style.position = 'absolute';
 button2.style.width = '150px';
@@ -71,7 +71,7 @@ button2.addEventListener('click', function(event) {
 // Prevent the default action (following the link or submitting a form)
 event.preventDefault();
 // Navigate to the specified URL
-window.location.href = 'pageTwo.html';
+window.location.href = 'results.html';
 });
 
 // Append the button to the document body or any other parent element
